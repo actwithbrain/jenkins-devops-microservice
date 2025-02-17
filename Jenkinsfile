@@ -15,6 +15,7 @@ pipeline {
 				sh 'mvn --version'
 				sh 'docker version'
 			}
+		}
 
 		stage('Compile') {
 			steps {
@@ -28,8 +29,8 @@ pipeline {
 				echo "Test"
 				sh 'mvn test'
 			}
-		
 		}
+		
 		stage('Integration Test') {
 			steps {
 				echo "Integration Test"
